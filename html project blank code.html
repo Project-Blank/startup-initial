@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Journey</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F7FFA9; /* Greenish-yellow background */
+            color: #333; /* Dark grey text */
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-weight: bold;
+        }
+        form {
+            margin-top: 50px;
+        }
+        select {
+            width: 200px;
+            margin-bottom: 10px;
+        }
+        .button {
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        .section {
+            padding: 50px;
+            background-size: cover;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        .section h2 {
+            margin-bottom: 30px;
+        }
+        .section p {
+            margin-bottom: 20px;
+        }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+        }
+        /* Background images */
+        #beginJourney {
+            background-image: url('excavator.jpg'); /* Excavator image */
+        }
+        #postCredentials {
+            background-image: url('electrician.jpg'); /* Electrician image */
+        }
+        #showcaseWork {
+            background-image: url('welder.jpg'); /* Welder image */
+        }
+        #certificationResources {
+            background-image: url('construction_workers.jpg'); /* Construction workers image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Section 1: Begin Your Journey -->
+        <div class="section" id="beginJourney">
+            <h1>Begin Your Career Journey</h1>
+            <p>Select up to 3 categories that best suit your interest:</p>
+            <form id="categoryForm">
+                <label for="indoorOutdoor">Indoor or Outdoor:</label>
+                <select id="indoorOutdoor">
+                    <option value="indoor">Indoor</option>
+                    <option value="outdoor">Outdoor</option>
+                    <option value="both">Both Indoor and Outdoor</option>
+                </select>
+                <br>
+                <label for="categories">Select up to 3 categories:</label><br>
+                <select id="categories" multiple>
+                    <option value="electrical">Electrical</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="hardscapes">Hardscapes</option>
+                    <option value="grading">Grading</option>
+                    <option value="hvac">HVAC</option>
+                    <option value="carpentry">Carpentry</option>
+                    <option value="roofing">Roofing</option>
+                    <option value="framing">Framing</option>
+                    <option value="machineryOperator">Machinery Operator</option>
+                    <option value="landscaping">Landscaping</option>
+                    <option value="pesticideApplication">Pesticide Application</option>
+                    <option value="automotiveMechanic">Automotive Mechanic</option>
+                    <option value="autoTechnician">Auto Technician</option>
+                    <option value="aircraftAP">Aircraft A&P</option>
+                </select>
+                <br>
+                <a href="#postCredentials" class="button">Next Step: Post Credentials</a>
+            </form>
+        </div>
+
+        <!-- Section 2: Post Credentials -->
+        <div class="section" id="postCredentials">
+            <h2>Post Your Credentials</h2>
+            <p>Select your category to post your credentials:</p>
+            <select id="postCredentialsDropdown">
+                <option value="none">Select Category</option>
+                <option value="electrical">Electrical</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="hardscapes">Hardscapes</option>
+                <option value="grading">Grading</option>
+                <option value="hvac">HVAC</option>
+                <option value="carpentry">Carpentry</option>
+                <option value="roofing">Roofing</option>
+                <option value="framing">Framing</option>
+                <option value="machineryOperator">Machinery Operator</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="pesticideApplication">Pesticide Application</option>
+                <option value="automotiveMechanic">Automotive Mechanic</option>
+                <option value="autoTechnician">Auto Technician</option>
+                <option value="aircraftAP">Aircraft A&P</option>
+            </select>
+            <br>
+            <a href="#showcaseWork" class="button">Next Step: Showcase Work</a>
+        </div>
+
+        <!-- Section 3: Showcase Work -->
+        <div class="section" id="showcaseWork">
+            <h2>Showcase Your Work</h2>
+            <p>Post an Instagram, YouTube, or TikTok video of yourself performing the work:</p>
+            <input type="text" id="socialMediaLink" placeholder="Enter Video Link">
+            <br>
+            <button onclick="submitVideo()" class="button">Submit</button>
+            <br>
+            <a href="#certificationResources" class="button">Next Step: Technical Certification Resources</a>
+        </div>
+
+        <!-- Section 4: Technical Certification Resources -->
+        <div class="section" id="certificationResources">
+            <h2>Technical Certification Resources</h2>
+            <p>If you lack certification, consider obtaining certification from the following resources:</p>
+            <ul>
+                <li><a href="#">Electrical Certification Page</a></li>
+                <li><a href="#">Plumbing Certification Page</a></li>
+                <li><a href="#">HVAC Certification Page</a></li>
+                <!-- Add more certification links as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Function to submit social media video link
+        function submitVideo() {
+            const videoLink = document.getElementById('socialMediaLink').value;
+            if (videoLink.trim() === '') {
+                alert('Please enter a valid video link.');
+                return;
+            }
+            // Code to handle submission of video link (e.g., store in database, display on page, etc.)
+            console.log('Submitted video link:', videoLink);
+        }
+    </script>
+</body>
+</html>
+
